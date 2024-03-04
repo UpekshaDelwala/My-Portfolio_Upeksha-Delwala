@@ -1,0 +1,64 @@
+/* CSS for hamburger icon */
+.menu-toggle {
+    display: none; /* Hide the hamburger icon by default for desktop */
+    cursor: pointer;
+}
+
+/* navigation bar for desktop */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0px;
+}
+
+nav a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* navigation bar for mobile */
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Display the hamburger icon for mobile */
+        padding: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust this value as needed */
+        left: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        z-index: 1;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+}

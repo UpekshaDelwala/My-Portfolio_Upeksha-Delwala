@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="w3Source.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="script.js"></script>
+    <style>
+      .portfolio-heading {
+        color: #803e00; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<section class="main-content">
+          <center><h2 class="portfolio-heading"><b>PORTFOLIO &nbsp&nbsp&nbspGALLERY</b></h2></center> 
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Web Design</button>
+  <button class="btn" onclick="filterSelection('cars')"> Graphic Design</button>
+  <button class="btn" onclick="filterSelection('people')"> Video Edits</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+
+    <div class="column nature">
+    <div class="content">
+      <a href="https://upekshadelwala.github.io/"><img src="web1.jpg" alt="web" style="width:100%"></a>
+      <h4>Web Design</h4>
+      <p>Paper Quilling exploring website.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="web2.jpg" alt="Lights" style="width:100%">
+      <h4>Web Design</h4>
+      <p>Charm Apparels official web site</p>
+    </div>
+  </div>
+  
+  <div class="column nature">
+    <div class="content">
+      <img src="web3.jpg" alt="Lights" style="width:100%">
+      <h4>Web Design</h4>
+      <p>A simple web site.</p>
+    </div>
+  </div>
+
+    <div class="column cars">
+    <div class="content">
+      <a href="gra2.jpg"><img src="gra3.jpg" alt="Car" style="width:100%"></a>
+      <h4>Graphic Design</h4>
+      <p>A poster design reprsenting the structure of matters.</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="gra1.jpg"><img src="gra6.jpg" alt="Car" style="width:100%"></a>
+      <h4>Graphic Design</h4>
+      <p>Career developing poster.</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="gra4.jpg"><img src="gra5.jpg" alt="Car" style="width:100%"></a>
+      <h4>Graphic Design</h4>
+      <p>Logo for EcoGlow washing powder</p>
+    </div>
+  </div>
+
+
+  <div class="column people">
+    <div class="content">
+      <a href="v1.ppsx"><img src="v1.png" alt="People" style="width:100%"></a>
+      <h4>Video Edits</h4>
+      <p>Interactive supporting video for GCE.A/L </p>
+    </div>
+  </div>
+
+  <!--
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>-->
+<!-- END GRID -->
+</div>
+    </section>
+
+  
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+</script>
+
+
+</body>
+</html>
